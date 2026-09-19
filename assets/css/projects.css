@@ -1338,6 +1338,8 @@ img{
 
 .project-image{
 
+    position:relative;
+
     height:230px;
 
     overflow:hidden;
@@ -1356,6 +1358,72 @@ img{
 
 }
 
+.project-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(8,17,31,.75);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:16px;
+
+    opacity:0;
+
+    transition:.35s ease;
+
+    backdrop-filter:blur(4px);
+
+    z-index:2;
+
+}
+
+.project-card:hover .project-overlay{
+
+    opacity:1;
+
+}
+
+.project-overlay a{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    background:#00d4ff;
+
+    color:#08111f;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:18px;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.project-overlay a:hover{
+
+    transform:scale(1.15);
+
+    box-shadow:0 0 20px #00d4ff;
+
+}
+
 .project-card:hover img{
 
     transform:scale(1.08);
@@ -1367,6 +1435,8 @@ img{
     padding:30px;
 
 }
+
+.project-tag,
 
 .project-category{
 
