@@ -12,6 +12,16 @@ html{
     scroll-behavior:smooth;
 }
 
+img{
+    max-width:100%;
+    height:auto;
+}
+
+html, body{
+    max-width:100%;
+    overflow-x:hidden;
+}
+
 body{
 
     background:#0B1120;
@@ -19,8 +29,7 @@ body{
     color:#fff;
 
     font-family:'Poppins',sans-serif;
-
-    overflow-x:hidden;
+    position:relative;
 
 }
 
@@ -334,7 +343,9 @@ body::after{
 
 .hero-image img{
 
-    width:380px;
+    width:min(380px, 85vw);
+    max-width:100%;
+    height:auto;
 
     border-radius:30px;
 
@@ -1059,28 +1070,6 @@ body::after{
 
 @media (max-width:768px){
 
-    .navbar{
-
-        flex-direction:column;
-
-        height:auto;
-
-        padding:20px;
-
-        gap:20px;
-
-    }
-
-    .navbar ul{
-
-        flex-wrap:wrap;
-
-        justify-content:center;
-
-        gap:20px;
-
-    }
-
     .hero{
 
         padding:140px 6% 80px;
@@ -1134,164 +1123,7 @@ body::after{
 
 
 
-/* ===========================
-      MOBILE RESPONSIVE
-=========================== */
 
-@media (max-width:768px){
-
-/* Navbar */
-
-.navbar{
-    flex-direction:column;
-    height:auto;
-    padding:20px;
-    gap:20px;
-}
-
-.nav-links{
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:15px;
-}
-
-.hire-btn{
-    display:none;
-}
-
-/* Hero */
-
-.hero{
-    flex-direction:column;
-    text-align:center;
-    gap:50px;
-}
-
-.hero-left,
-.hero-right{
-    width:100%;
-}
-
-.hero h1{
-    font-size:42px;
-}
-
-.hero h2{
-    font-size:24px;
-}
-
-.hero-description{
-    max-width:100%;
-}
-
-.hero-buttons{
-    justify-content:center;
-    flex-wrap:wrap;
-}
-
-.social-links{
-    justify-content:center;
-}
-
-/* Logo */
-
-.hero-circle{
-    width:320px;
-    height:320px;
-}
-
-.hero-ring{
-    width:300px;
-    height:300px;
-}
-
-.hero-logo{
-    width:180px;
-    height:180px;
-}
-
-.hero-logo img{
-    width:100%;
-    height:100%;
-}
-
-/* Tech */
-
-.tech{
-    font-size:12px;
-    padding:8px 12px;
-}
-
-.tech.html{top:-20px;left:0;}
-.tech.css{top:-10px;right:0;}
-.tech.js{right:-20px;top:120px;}
-.tech.firebase{bottom:50px;left:-20px;}
-.tech.flutter{bottom:-10px;right:10px;}
-
-/* About */
-
-.about-container{
-    grid-template-columns:1fr;
-}
-
-.about-stats{
-    grid-template-columns:1fr 1fr;
-}
-
-/* Services */
-
-.services-grid{
-    grid-template-columns:1fr;
-}
-
-/* Skills */
-
-.skills-grid{
-    grid-template-columns:1fr;
-}
-
-/* Projects */
-
-.projects-grid{
-    grid-template-columns:1fr;
-}
-
-/* Timeline */
-
-.timeline::before{
-    left:25px;
-}
-
-.timeline-item{
-    width:100%;
-    left:0 !important;
-    padding-left:60px;
-    padding-right:10px;
-}
-
-.timeline-item::after{
-    left:17px !important;
-}
-
-/* Contact */
-
-.contact-container{
-    grid-template-columns:1fr;
-}
-
-/* Footer */
-
-.footer-social{
-    flex-wrap:wrap;
-    justify-content:center;
-}
-
-img{
-    max-width:100%;
-    height:auto;
-}
-
-}
 /*==============================
         PROJECTS
 ==============================*/
@@ -1308,7 +1140,7 @@ img{
 
 .projects-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(min(300px, 100%),1fr));
     gap:35px;
 }
 

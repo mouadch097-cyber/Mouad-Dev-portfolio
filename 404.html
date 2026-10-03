@@ -9,13 +9,19 @@
 
 <title>404 | Mouad.Dev</title>
 
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="assets/images/logo.png">
+<link rel="manifest" href="manifest.json">
+
 <link rel="stylesheet" href="assets/css/style.css">
 
 <style>
 
 body{
 
-height:100vh;
+min-height:100vh;
+padding:20px;
+overflow-x:hidden;
 
 display:flex;
 
@@ -77,6 +83,19 @@ font-weight:600;
 
 background:#00FF88;
 
+}
+
+@media(max-width:480px){
+    .error h1{
+        font-size:75px;
+    }
+    .error p{
+        font-size:17px;
+    }
+    .error a{
+        padding:12px 25px;
+        font-size:15px;
+    }
 }
 
 </style>

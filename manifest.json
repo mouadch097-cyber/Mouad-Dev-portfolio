@@ -1,0 +1,21 @@
+{
+  "name": "Mouad.Dev | Full Stack Developer",
+  "short_name": "Mouad.Dev",
+  "description": "Mouad.Dev - Full Stack Developer, Mobile App Developer, AI Developer, Creative Designer",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B1120",
+  "theme_color": "#00D4FF",
+  "icons": [
+    {
+      "src": "assets/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

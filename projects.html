@@ -11,9 +11,13 @@
 
     <meta name="description" content="Explore all projects by Mouad.Dev">
 
-    <!-- CSS -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="manifest" href="manifest.json">
 
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/projects.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 
     <!-- Google Font -->
 
@@ -41,37 +45,33 @@
         NAVBAR
 ========================== -->
 
+<header>
 <nav class="navbar">
 
     <a href="index.html" class="logo">
-
-        <span>Mouad</span><span class="dot">.</span><span>Dev</span>
-
+        <span class="logo-text">Mouad</span><span class="logo-dot">.</span><span class="logo-dev">Dev</span>
     </a>
 
-    <ul>
-
+    <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-
         <li><a href="index.html#about">About</a></li>
-
         <li><a href="index.html#services">Services</a></li>
-
         <li><a href="index.html#skills">Skills</a></li>
-
         <li><a class="active" href="projects.html">Projects</a></li>
-
         <li><a href="index.html#contact">Contact</a></li>
-
     </ul>
 
-    <a href="index.html#contact" class="hire-btn">
-
-        Hire Me
-
-    </a>
+    <div class="nav-actions">
+        <a href="index.html#contact" class="hire-btn">
+            Hire Me
+        </a>
+        <div class="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
 
 </nav>
+</header>
 
 <!-- ==========================
         HERO
@@ -733,6 +733,7 @@
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
+<script src="assets/js/app.js"></script>
 <script src="assets/js/projects.js"></script>
 
 <script>
