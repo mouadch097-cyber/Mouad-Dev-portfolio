@@ -93,80 +93,95 @@ module.exports = async function handler(req, res) {
     const safeName = escapeHtml(name.trim());
     const safeEmail = escapeHtml(email.trim());
     const safeSubject = escapeHtml(subject.trim());
-    const safeMessage = escapeHtml(message.trim()).replace(/\n/g, '<br/>');
+    const safeMessage = escapeHtml(message.trim());
 
     const htmlContent = `
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>New Portfolio Message</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Contact Message</title>
 </head>
-<body style="margin: 0; padding: 0; background-color: #0b1120; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #f1f5f9;">
-  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background-color: #0b1120; padding: 30px 15px;">
+<body style="margin:0; padding:0; background-color:#0a192f; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;">
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#0a192f; padding:40px 20px;">
     <tr>
       <td align="center">
-        <table role="presentation" width="100%" style="max-width: 600px; background-color: #151d32; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-          <!-- Header -->
+
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px; width:100%; background-color:#112240; border-radius:16px; overflow:hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.4); border: 1px solid #1d3557;">
+
           <tr>
-            <td style="padding: 28px 30px; background: linear-gradient(135deg, #0f172a, #1e293b); border-bottom: 2px solid #00d4ff;">
-              <h1 style="margin: 0; font-size: 22px; color: #ffffff; letter-spacing: 0.5px;">
-                <span style="color: #ffffff;">Mouad</span><span style="color: #00d4ff;">.</span><span style="color: #00ff88;">Dev</span>
-                <span style="font-size: 14px; font-weight: normal; color: #94a3b8; margin-left: 10px;">New Contact Message</span>
+            <td style="background: linear-gradient(135deg, #0a192f 0%, #112240 100%); padding:32px 32px 24px 32px; border-bottom: 2px solid #64ffda;">
+              <h1 style="margin:0; font-size:26px; font-weight:700; color:#ffffff; letter-spacing:0.5px;">
+                Mouad<span style="color:#64ffda;">.Dev</span>
               </h1>
+              <p style="margin:8px 0 0 0; font-size:14px; color:#8892b0;">
+                📬 New Contact Message
+              </p>
             </td>
           </tr>
-          <!-- Content -->
+
           <tr>
-            <td style="padding: 30px;">
-              <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
-                <tr>
-                  <td style="padding-bottom: 16px;">
-                    <strong style="color: #00d4ff; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">From:</strong>
-                    <div style="font-size: 16px; color: #ffffff; margin-top: 4px;">${safeName} &lt;<a href="mailto:${safeEmail}" style="color: #00ff88; text-decoration: none;">${safeEmail}</a>&gt;</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding-bottom: 20px;">
-                    <strong style="color: #00d4ff; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">Subject:</strong>
-                    <div style="font-size: 16px; color: #ffffff; margin-top: 4px;">${safeSubject}</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding: 20px; background-color: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px;">
-                    <strong style="color: #00d4ff; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 10px;">Message:</strong>
-                    <div style="font-size: 15px; line-height: 1.7; color: #e2e8f0; white-space: pre-line;">${safeMessage}</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding-top: 25px; text-align: center;">
-                    <a href="mailto:${safeEmail}?subject=Re:%20${encodeURIComponent(subject.trim())}" style="display: inline-block; padding: 12px 28px; background: linear-gradient(135deg, #00d4ff, #00ff88); color: #08111f; text-decoration: none; font-weight: 600; border-radius: 50px; font-size: 14px;">
-                      Reply to ${safeName} ✉️
-                    </a>
-                  </td>
-                </tr>
-              </table>
+            <td style="padding:32px;">
+
+              <div style="margin-bottom:24px;">
+                <p style="margin:0 0 6px 0; font-size:12px; font-weight:600; color:#64ffda; text-transform:uppercase; letter-spacing:1.5px;">From</p>
+                <p style="margin:0; font-size:16px; color:#e6f1ff;">
+                  <strong>${safeName}</strong>
+                </p>
+                <a href="mailto:${safeEmail}" style="color:#64ffda; text-decoration:none; font-size:14px;">${safeEmail}</a>
+              </div>
+
+              <div style="margin-bottom:24px;">
+                <p style="margin:0 0 6px 0; font-size:12px; font-weight:600; color:#64ffda; text-transform:uppercase; letter-spacing:1.5px;">Subject</p>
+                <p style="margin:0; font-size:16px; color:#e6f1ff;">${safeSubject}</p>
+              </div>
+
+              <div style="margin-bottom:32px;">
+                <p style="margin:0 0 6px 0; font-size:12px; font-weight:600; color:#64ffda; text-transform:uppercase; letter-spacing:1.5px;">Message</p>
+                <div style="background-color:#0a192f; border-left:3px solid #64ffda; border-radius:8px; padding:20px; margin-top:8px;">
+                  <p style="margin:0; font-size:15px; color:#e6f1ff; line-height:1.7; white-space:pre-wrap;">${safeMessage}</p>
+                </div>
+              </div>
+
+              <div style="text-align:center; margin: 32px 0 8px 0;">
+                <a href="mailto:${safeEmail}?subject=Re: ${encodeURIComponent(subject.trim())}"
+                   style="display:inline-block; background: linear-gradient(135deg, #64ffda 0%, #00b8a9 100%); color:#0a192f; text-decoration:none; padding:14px 32px; border-radius:50px; font-weight:700; font-size:15px; letter-spacing:0.3px;">
+                  Reply to ${safeName} ✉️
+                </a>
+              </div>
+
             </td>
           </tr>
-          <!-- Footer -->
+
           <tr>
-            <td style="padding: 16px 30px; background-color: #0f172a; border-top: 1px solid rgba(255,255,255,0.06); text-align: center; font-size: 12px; color: #64748b;">
-              Received via Mouad.Dev Portfolio contact form on Vercel
+            <td style="padding:20px 32px; background-color:#0a192f; border-top:1px solid #1d3557; text-align:center;">
+              <p style="margin:0; font-size:12px; color:#8892b0;">
+                Sent from
+                <a href="https://mouad-dev-portfolio.vercel.app" style="color:#64ffda; text-decoration:none;">mouad-dev-portfolio.vercel.app</a>
+              </p>
+              <p style="margin:6px 0 0 0; font-size:11px; color:#495670;">
+                © ${new Date().getFullYear()} Mouad.Dev — Code · Build · Innovate
+              </p>
             </td>
           </tr>
+
         </table>
+
       </td>
     </tr>
   </table>
+
 </body>
 </html>
     `;
 
     const { data, error } = await resend.emails.send({
-      from: 'onboarding@resend.dev',
-      to: ['mouadch097@gmail.com'],
+      from: 'Mouad.Dev <onboarding@resend.dev>',
+      to: 'mouadch097@gmail.com',
       replyTo: email.trim(),
-      subject: `New message from ${name.trim()}: ${subject.trim()}`,
+      subject: `📩 Portfolio Contact — ${subject.trim()}`,
       html: htmlContent,
       text: `New message from: ${name.trim()} (${email.trim()})\nSubject: ${subject.trim()}\n\nMessage:\n${message.trim()}`
     });
