@@ -69,40 +69,65 @@ img {
         justify-content: center;
     }
 
+    .hero-circle::before {
+        display: none !important;
+    }
+
     .hero-circle {
         position: relative;
-        width: min(380px, 85vw);
-        height: min(380px, 85vw);
+        width: min(360px, 85vw);
+        height: min(360px, 85vw);
         max-width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         margin: auto;
-    }
-
-    .hero-circle::before {
-        content: "";
-        position: absolute;
-        width: 88%;
-        height: 88%;
         border-radius: 50%;
-        border: 3px solid #00D4FF;
-        box-shadow: 0 0 20px #00D4FF, 0 0 40px #00D4FF, 0 0 60px rgba(0, 212, 255, .4);
     }
 
     .hero-ring {
-        width: 88%;
-        height: 88%;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 2.5px solid #00D4FF;
+        box-shadow: 0 0 20px rgba(0, 212, 255, .5), 0 0 40px rgba(0, 212, 255, .25);
+        z-index: 1;
+        pointer-events: none;
     }
 
     .hero-logo {
-        width: 58%;
-        height: 58%;
-        border-radius: 50%;
-        object-fit: cover;
+        width: 75%;
+        height: 75%;
+        border-radius: 0;
+        overflow: visible;
+        box-shadow: none;
+        background: transparent;
         position: relative;
-        z-index: 2;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+
+    .hero-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.6)) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.8));
+    }
+
+    .tech {
+        font-size: 13px;
+        padding: 9px 15px;
+    }
+
+    .tech.html { top: -20px; left: 50%; transform: translateX(-50%); }
+    .tech.css { top: 16%; right: -20px; }
+    .tech.js { bottom: 10%; right: -15px; }
+    .tech.flutter { bottom: 10%; left: -15px; }
+    .tech.firebase { top: 16%; left: -20px; }
 
     /* Grids */
     .about-container {
@@ -353,34 +378,83 @@ img {
         padding: 20px 0;
     }
 
-    .hero-circle {
-        width: min(290px, 80vw);
-        height: min(290px, 80vw);
+    .hero-circle::before {
+        display: none !important;
     }
 
-    .hero-circle::before,
+    .hero-circle {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+        width: 100%;
+        max-width: 360px;
+        height: auto;
+        min-height: auto;
+        border-radius: 0;
+        margin: 0 auto;
+        padding-top: 250px;
+        overflow: visible;
+    }
+
     .hero-ring {
-        width: 88%;
-        height: 88%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        border: 2.5px solid #00d4ff;
+        box-shadow: 0 0 20px rgba(0, 212, 255, 0.4), inset 0 0 15px rgba(0, 212, 255, 0.2);
+        z-index: 1;
+        pointer-events: none;
     }
 
     .hero-logo {
-        width: 58%;
-        height: 58%;
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+        height: 200px;
+        border-radius: 0;
+        overflow: visible;
+        box-shadow: none;
+        background: transparent;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .hero-logo img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
+        filter: drop-shadow(0 0 18px rgba(0, 212, 255, 0.5)) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.8));
     }
 
-    /* Tech Badges on Circle */
+    /* Tech Badges on Mobile: flex-wrap grid layout below the circle */
     .tech {
-        font-size: 11px;
-        padding: 6px 12px;
+        position: static !important;
+        transform: none !important;
+        font-size: 12px;
+        padding: 8px 14px;
         gap: 6px;
-        border-radius: 12px;
+        border-radius: 20px;
+        background: rgba(21, 29, 50, 0.85);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(0, 212, 255, 0.25);
+        color: #fff;
+        display: inline-flex;
+        align-items: center;
+        z-index: 2;
+        margin: 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 
     .tech i, .tech img {
@@ -389,11 +463,17 @@ img {
         height: 15px;
     }
 
-    .tech.html { top: -8px; left: 12px; }
-    .tech.css { top: -5px; right: 12px; }
-    .tech.js { right: -5px; top: 46%; }
-    .tech.firebase { bottom: 20px; left: -5px; }
-    .tech.flutter { bottom: -8px; right: 20px; }
+    .tech.html,
+    .tech.css,
+    .tech.js,
+    .tech.firebase,
+    .tech.flutter {
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        transform: none;
+    }
 
     /* About */
     .about-card {
@@ -632,27 +712,32 @@ img {
     }
 
     /* Hero circle & badges optimized for 375px & 320px */
-    .hero-circle {
-        width: min(250px, 76vw);
-        height: min(250px, 76vw);
+    .hero-circle::before {
+        display: none !important;
     }
 
-    .hero-circle::before,
+    .hero-circle {
+        max-width: 320px;
+        padding-top: 220px;
+        gap: 8px;
+    }
+
     .hero-ring {
-        width: 90%;
-        height: 90%;
+        width: 190px;
+        height: 190px;
     }
 
     .hero-logo {
-        width: 58%;
-        height: 58%;
+        top: 5px;
+        width: 180px;
+        height: 180px;
     }
 
     .tech {
-        font-size: 10px;
-        padding: 5px 9px;
-        gap: 4px;
-        border-radius: 10px;
+        font-size: 11px;
+        padding: 6px 11px;
+        gap: 5px;
+        border-radius: 16px;
     }
 
     .tech i, .tech img {
@@ -660,12 +745,6 @@ img {
         width: 13px;
         height: 13px;
     }
-
-    .tech.html { top: -6px; left: 8px; }
-    .tech.css { top: -4px; right: 8px; }
-    .tech.js { right: 0; top: 48%; }
-    .tech.firebase { bottom: 16px; left: 0; }
-    .tech.flutter { bottom: -6px; right: 14px; }
 
     /* About */
     .about-stats {
