@@ -1,71 +1,93 @@
 // ========================================
-// EmailJS Configuration
+// Contact Form Handler (Resend via Vercel Function)
 // Mouad.Dev Portfolio
 // ========================================
 
-emailjs.init({
-    publicKey: "uc-w7A9YTvK8cVZRt"
-});
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contact-form");
+    const status = document.getElementById("status");
 
-const form = document.getElementById("contact-form");
-const status = document.getElementById("status");
+    if (!form) return;
 
-form.addEventListener("submit", async function (e) {
+    form.addEventListener("submit", async function (e) {
+        e.preventDefault();
 
-    e.preventDefault();
+        const button = form.querySelector('button[type="submit"]') || form.querySelector("button");
+        const originalButtonText = button ? button.innerHTML : "Send Message 🚀";
 
-    const button = form.querySelector("button");
+        // Disable submit button while sending
+        if (button) {
+            button.disabled = true;
+            button.innerHTML = "Sending... ⏳";
+        }
 
-    button.disabled = true;
-    button.innerHTML = "Sending...";
+        if (status) {
+            status.style.color = "#00D4FF";
+            status.textContent = "Sending your message...";
+        }
 
-    status.style.color = "#00D4FF";
-    status.innerHTML = "Sending your message...";
+        const formData = {
+            name: form.name.value.trim(),
+            email: form.email.value.trim(),
+            subject: form.subject.value.trim(),
+            message: form.message.value.trim()
+        };
 
-    try {
+        try {
+            const response = await fetch("/api/send", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify(formData)
+            });
 
-        // إرسال البريد
-        await emailjs.sendForm(
-            "service_ssr7fxw",
-            "template_gxmzg8v",
-            form
-        );
+            const result = await response.json().catch(() => ({}));
 
-        // حفظ الرسالة في Firestore
-        await db.collection("messages").add({
+            if (response.ok && result.success) {
+                // Success: "✅ Message sent successfully!" (green), reset form.
+                if (status) {
+                    status.style.color = "#00FF88";
+                    status.textContent = "✅ Message sent successfully!";
+                    setTimeout(() => {
+                        status.textContent = "";
+                    }, 5000);
+                }
 
-            name: form.name.value,
+                form.reset();
 
-            email: form.email.value,
+                // Optional Firestore backup if available
+                if (typeof db !== "undefined") {
+                    try {
+                        await db.collection("messages").add({
+                            name: formData.name,
+                            email: formData.email,
+                            subject: formData.subject,
+                            message: formData.message,
+                            createdAt: firebase.firestore.FieldValue.serverTimestamp()
+                        });
+                    } catch (dbErr) {
+                        console.warn("Firestore backup notice:", dbErr);
+                    }
+                }
+            } else {
+                throw new Error(result.error || `HTTP ${response.status}: Failed to send message`);
+            }
+        } catch (error) {
+            // Error: "❌ Failed to send message." (red), log real error to console.
+            console.error("Failed to send contact message:", error);
 
-            subject: form.subject.value,
-
-            message: form.message.value,
-
-            createdAt: firebase.firestore.FieldValue.serverTimestamp()
-
-        });
-
-        status.style.color = "#00FF88";
-        status.innerHTML = "✅ Message sent successfully!";
-        setTimeout(()=>{
-
-status.innerHTML="";
-
-},5000);
-
-        form.reset();
-
-    } catch (error) {
-
-        console.error(error);
-
-        status.style.color = "#ff4d4d";
-        status.innerHTML = "❌ Failed to send message.";
-
-    }
-
-    button.disabled = false;
-    button.innerHTML = "Send Message 🚀";
-
+            if (status) {
+                status.style.color = "#ff4d4d";
+                status.textContent = "❌ Failed to send message.";
+            }
+        } finally {
+            // Re-enable submit button
+            if (button) {
+                button.disabled = false;
+                button.innerHTML = originalButtonText;
+            }
+        }
+    });
 });

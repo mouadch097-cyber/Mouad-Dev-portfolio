@@ -1,0 +1,9 @@
+{
+  "name": "mouad-dev-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mouad.Dev - Full Stack Developer Portfolio",
+  "dependencies": {
+    "resend": "^4.0.0"
+  }
+}
