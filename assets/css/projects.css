@@ -1421,3 +1421,53 @@ flex-direction:column;
 }
 
 }
+
+/*==============================
+   APP CARDS & PLAY STORE
+==============================*/
+
+.project-card.app .project-image{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:radial-gradient(circle at center, rgba(0,212,255,.15) 0%, rgba(8,17,31,.95) 75%);
+    padding:20px;
+}
+
+.project-card.app .project-image img.app-icon{
+    width:130px;
+    height:130px;
+    max-width:130px;
+    max-height:130px;
+    object-fit:cover;
+    border-radius:26px;
+    box-shadow:0 10px 25px rgba(0,0,0,.5), 0 0 25px rgba(0,212,255,.3);
+    border:1px solid rgba(255,255,255,.12);
+    transition:transform .4s ease, box-shadow .4s ease;
+}
+
+.project-card.app:hover .project-image img.app-icon{
+    transform:scale(1.08);
+    box-shadow:0 15px 35px rgba(0,0,0,.6), 0 0 35px rgba(0,212,255,.5);
+}
+
+.project-links a.playstore-btn,
+.project-links .playstore-btn{
+    background:linear-gradient(135deg, #00d4ff 0%, #0099ff 100%) !important;
+    color:#08111f !important;
+    font-weight:700 !important;
+    display:inline-flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+    gap:8px !important;
+    box-shadow:0 4px 15px rgba(0,212,255,.3) !important;
+    border:none !important;
+}
+
+.project-links a.playstore-btn:hover,
+.project-links .playstore-btn:hover{
+    background:linear-gradient(135deg, #38e1ff 0%, #00b4ff 100%) !important;
+    box-shadow:0 6px 25px rgba(0,212,255,.55) !important;
+    transform:translateY(-2px) !important;
+    color:#08111f !important;
+}

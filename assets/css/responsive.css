@@ -542,6 +542,22 @@ img {
         width: 100%;
     }
 
+    .project-card.app .project-image {
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project-card.app img.app-icon {
+        width: 120px !important;
+        height: 120px !important;
+        max-width: 120px !important;
+        max-height: 120px !important;
+        object-fit: cover !important;
+        border-radius: 24px !important;
+    }
+
     .project-card h3 {
         font-size: 22px;
         margin: 18px 18px 8px;
@@ -786,6 +802,18 @@ img {
     /* Projects */
     .project-card img {
         height: 170px;
+    }
+
+    .project-card.app .project-image {
+        height: 170px;
+    }
+
+    .project-card.app img.app-icon {
+        width: 105px !important;
+        height: 105px !important;
+        max-width: 105px !important;
+        max-height: 105px !important;
+        border-radius: 20px !important;
     }
 
     .project-card h3 {
