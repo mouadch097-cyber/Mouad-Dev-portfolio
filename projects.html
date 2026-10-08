@@ -20,26 +20,37 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
 
     <!-- Google Font -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Theme & Language Early Init -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            const savedLang = localStorage.getItem('lang') || 'en';
+            document.documentElement.lang = savedLang;
+            document.documentElement.dir = savedLang === 'ar' ? 'rtl' : 'ltr';
+        })();
+    </script>
 
     <!-- Font Awesome -->
-
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <!-- AOS -->
-
     <link rel="stylesheet"
     href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
 </head>
 
 <body>
+
+   <div id="loader">
+     <div class="loader-logo">Mouad<span>.Dev</span></div>
+     <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+   </div>
 
 <!-- ==========================
         NAVBAR
@@ -53,16 +64,22 @@
     </a>
 
     <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="index.html#skills">Skills</a></li>
-        <li><a class="active" href="projects.html">Projects</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+        <li><a href="index.html#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="index.html#skills" data-i18n="nav.skills">Skills</a></li>
+        <li><a class="active" href="projects.html" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="index.html#contact" data-i18n="nav.contact">Contact</a></li>
     </ul>
 
     <div class="nav-actions">
-        <a href="index.html#contact" class="hire-btn">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">
+            <span id="lang-label">AR</span>
+        </button>
+        <a href="index.html#contact" class="hire-btn" data-i18n="nav.hire">
             Hire Me
         </a>
         <div class="menu-btn">
@@ -81,16 +98,12 @@
 
     <div class="hero-content" data-aos="fade-right">
 
-        <span class="hero-tag">
-
+        <span class="hero-tag" data-i18n="projects.portfolio">
             MY PORTFOLIO
-
         </span>
 
-        <h1>
-
+        <h1 data-i18n="projects.title">
             Explore My Projects
-
         </h1>
 
         <p>

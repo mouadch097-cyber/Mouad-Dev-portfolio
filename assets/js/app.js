@@ -2,7 +2,90 @@
 // Mouad.Dev - Main Application JS
 // ==========================================
 
+// ------------------------------------------
+// Feature 1: Loading Screen
+// ------------------------------------------
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        const loader = document.getElementById('loader');
+        if (loader) {
+            loader.classList.add('hidden');
+            setTimeout(() => loader.remove(), 600);
+        }
+    }, 1200);
+});
+
+// ------------------------------------------
+// Feature 2: Dark / Light Mode Init
+// ------------------------------------------
+function updateThemeIcon(theme) {
+    const themeToggle = document.getElementById('theme-toggle');
+    const icon = themeToggle?.querySelector('i');
+    if (icon) {
+        icon.className = theme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+    }
+}
+
+function initTheme() {
+    const themeToggle = document.getElementById('theme-toggle');
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+
+    themeToggle?.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme') || 'dark';
+        const next = current === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        updateThemeIcon(next);
+    });
+}
+
+// ------------------------------------------
+// Feature 3: AR/EN Language Switcher Init
+// ------------------------------------------
+let currentLang = localStorage.getItem('lang') || 'en';
+
+async function applyLanguage(lang) {
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    const label = document.getElementById('lang-label');
+    if (label) {
+        label.textContent = lang === 'ar' ? 'EN' : 'AR';
+    }
+    try {
+        const res = await fetch(`assets/i18n/${lang}.json`);
+        if (!res.ok) return;
+        const t = await res.json();
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (t[key]) {
+                el.textContent = t[key];
+            }
+        });
+    } catch (e) {
+        console.error('Error loading language file:', e);
+    }
+}
+
+function initLanguage() {
+    applyLanguage(currentLang);
+
+    document.getElementById('lang-toggle')?.addEventListener('click', () => {
+        currentLang = currentLang === 'en' ? 'ar' : 'en';
+        localStorage.setItem('lang', currentLang);
+        applyLanguage(currentLang);
+    });
+}
+
+// ------------------------------------------
+// DOM Content Loaded Handler
+// ------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
+    // Initialize Theme & Language
+    initTheme();
+    initLanguage();
+
     // ----------------------------------------
     // Mobile Navigation (Burger Menu)
     // ----------------------------------------

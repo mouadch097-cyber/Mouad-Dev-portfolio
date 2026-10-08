@@ -12,77 +12,65 @@
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="assets/images/logo.png">
 <link rel="manifest" href="manifest.json">
-
 <link rel="stylesheet" href="assets/css/style.css">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+<script>
+    (function() {
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        const savedLang = localStorage.getItem('lang') || 'en';
+        document.documentElement.lang = savedLang;
+        document.documentElement.dir = savedLang === 'ar' ? 'rtl' : 'ltr';
+    })();
+</script>
 
 <style>
 
 body{
-
 min-height:100vh;
 padding:20px;
 overflow-x:hidden;
-
 display:flex;
-
 justify-content:center;
-
 align-items:center;
-
-background:#0B1120;
-
-color:white;
-
+background:var(--bg-primary);
+color:var(--text-primary);
 font-family:Poppins,sans-serif;
-
+transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .error{
-
 text-align:center;
-
 }
 
 .error h1{
-
 font-size:120px;
-
-color:#00D4FF;
-
+color:var(--accent);
 margin-bottom:20px;
-
 }
 
 .error p{
-
 font-size:22px;
-
 margin-bottom:35px;
-
-color:#cfd3dc;
-
+color:var(--text-secondary);
 }
 
 .error a{
-
 padding:15px 35px;
-
-background:#00D4FF;
-
-color:#08111f;
-
+background:var(--accent);
+color:var(--bg-primary);
 border-radius:40px;
-
 text-decoration:none;
-
 font-weight:600;
-
+transition:0.3s;
 }
 
 .error a:hover{
-
-background:#00FF88;
-
+background:var(--accent-hover);
 }
 
 @media(max-width:480px){
@@ -104,23 +92,26 @@ background:#00FF88;
 
 <body>
 
+<div id="loader">
+  <div class="loader-logo">Mouad<span>.Dev</span></div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+
 <div class="error">
 
 <h1>404</h1>
 
-<p>
-
+<p data-i18n="error.desc">
 Oops! The page you are looking for doesn't exist.
-
 </p>
 
-<a href="index.html">
-
+<a href="index.html" data-i18n="error.back">
 Back Home
-
 </a>
 
 </div>
+
+<script src="assets/js/app.js"></script>
 
 </body>
 

@@ -24,8 +24,20 @@
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Cairo:wght@400;600;700&display=swap"
         rel="stylesheet">
+
+    <!-- Theme & Language Early Init -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            const savedLang = localStorage.getItem('lang') || 'en';
+            document.documentElement.lang = savedLang;
+            document.documentElement.dir = savedLang === 'ar' ? 'rtl' : 'ltr';
+        })();
+    </script>
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
@@ -40,6 +52,10 @@
 <body>
 
     <!-- Loading Screen -->
+    <div id="loader">
+      <div class="loader-logo">Mouad<span>.Dev</span></div>
+      <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    </div>
     <!-- Custom Cursor -->
     <div class="cursor"></div>
 
@@ -56,38 +72,30 @@
     </a>
 
     <ul class="nav-links">
-
-        <li><a href="#home" class="active">Home</a></li>
-
-        <li><a href="#about">About</a></li>
-
-        <li><a href="#services">Services</a></li>
-
-        <li><a href="#skills">Skills</a></li>
-
-        <li><a href="#projects">Projects</a></li>
-
-        <li><a href="#timeline">Timeline</a></li>
-
-        <li><a href="#contact">Contact</a></li>
-        <li>
-    <a href="projects.html"> All Projects</a>
-</li>
-
+        <li><a href="#home" class="active" data-i18n="nav.home">Home</a></li>
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#timeline" data-i18n="nav.timeline">Timeline</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        <li><a href="projects.html" data-i18n="nav.all_projects">All Projects</a></li>
     </ul>
 
     <div class="nav-actions">
-
-        <a href="#contact" class="hire-btn">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">
+            <span id="lang-label">AR</span>
+        </button>
+        <a href="#contact" class="hire-btn" data-i18n="nav.hire">
             Hire Me
         </a>
-
         <div class="menu-btn">
             <i class="fa-solid fa-bars"></i>
         </div>
-
     </div>
-
 </nav>
 
     </header>
@@ -100,19 +108,19 @@
         <!-- Left -->
         <div class="hero-left">
 
-            <p class="hero-top">
+            <p class="hero-top" data-i18n="hero.welcome">
                 👋 Hello, Welcome To My World
             </p>
 
             <h1>
-                I'm <span>Mouad.Dev</span>
+                <span data-i18n="hero.greeting">Hi, I'm</span> <span class="logo-dev" data-i18n="hero.name">Mouad.Dev</span>
             </h1>
 
             <h2>
                 <span id="typing"></span>
             </h2>
 
-            <p class="hero-description">
+            <p class="hero-description" data-i18n="hero.description">
                 I build premium websites, Android applications,
                 AI solutions and modern digital experiences
                 focused on performance, creativity and user experience.
@@ -151,11 +159,11 @@
 
 </div>
 
-                <a href="#projects" class="btn btn-primary">
+                <a href="#projects" class="btn btn-primary" data-i18n="hero.btn1">
                     🚀 Explore My Work
                 </a>
 
-                <a href="#contact" class="btn btn-outline">
+                <a href="#contact" class="btn btn-outline" data-i18n="hero.btn2">
                     📩 Hire Me
                 </a>
 

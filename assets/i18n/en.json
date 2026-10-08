@@ -1,0 +1,22 @@
+{
+  "nav.home": "Home",
+  "nav.about": "About",
+  "nav.services": "Services",
+  "nav.skills": "Skills",
+  "nav.projects": "Projects",
+  "nav.timeline": "Timeline",
+  "nav.contact": "Contact",
+  "nav.all_projects": "All Projects",
+  "nav.hire": "Hire Me",
+  "hero.welcome": "👋 Hello, Welcome To My World",
+  "hero.greeting": "Hi, I'm",
+  "hero.name": "Mouad.Dev",
+  "hero.role": "Full Stack Developer",
+  "hero.description": "I build premium websites, Android applications, AI solutions and modern digital experiences focused on performance, creativity and user experience.",
+  "hero.btn1": "🚀 Explore My Work",
+  "hero.btn2": "📩 Hire Me",
+  "projects.portfolio": "MY PORTFOLIO",
+  "projects.title": "Explore My Projects",
+  "error.desc": "Oops! The page you are looking for doesn't exist.",
+  "error.back": "Back Home"
+}
