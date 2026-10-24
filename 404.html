@@ -33,6 +33,7 @@
 body{
 min-height:100vh;
 padding:20px;
+padding-top:60px;
 overflow-x:hidden;
 display:flex;
 justify-content:center;
@@ -93,9 +94,16 @@ background:var(--accent-hover);
 <body>
 
 <div id="loader">
-  <div class="loader-logo">Mouad<span>.Dev</span></div>
-  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
-</div>
+      <div class="loader-logo">Mouad<span>.Dev</span></div>
+      <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    </div>
+
+    <!-- Top Promo Banner -->
+    <div class="promo-banner">
+      <div class="promo-text" data-i18n="promo.banner">
+        🔥 LIMITED TIME OFFER: Get 50% OFF on all Web & Mobile App services! 🔥 Use code MOUAD50 🔥
+      </div>
+    </div>
 
 <div class="error">
 
@@ -112,6 +120,9 @@ Back Home
 </div>
 
 <script src="assets/js/app.js"></script>
+
+<!-- Floating Promo Button -->
+<a href="index.html#contact" class="floating-promo-btn" data-i18n="promo.floating">🔥 Get 50% OFF</a>
 
 </body>
 

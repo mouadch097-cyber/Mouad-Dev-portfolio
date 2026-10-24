@@ -183,6 +183,37 @@ img {
 ========================================== */
 @media (max-width: 768px) {
 
+    /* Promo Mobile Optimization */
+    .floating-promo-btn {
+        padding: 10px 18px;
+        font-size: 13px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    [dir="rtl"] .floating-promo-btn {
+        right: auto;
+        left: 20px;
+    }
+
+    .hero-promo {
+        font-size: 13px;
+        padding: 8px 16px;
+        margin-top: 15px;
+        max-width: 90%;
+        line-height: 1.5;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .service-card {
+        padding: 28px 20px;
+    }
+
+
     /* Section padding & titles */
     section {
         padding: 75px 5% 50px;
@@ -208,7 +239,7 @@ img {
 
     /* Navigation Bar - Burger Menu */
     header {
-        top: 12px;
+        top: 48px;
         padding: 0 15px;
         width: 100%;
     }
@@ -677,7 +708,7 @@ img {
 
     /* Navbar */
     header {
-        top: 10px;
+        top: 46px;
         padding: 0 10px;
     }
 
