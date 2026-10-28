@@ -25,7 +25,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Cairo:wght@400;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Cairo:wght@400;600;700;800&display=swap"
         rel="stylesheet">
 
     <!-- Theme & Language Early Init -->
@@ -46,7 +46,6 @@
     <!-- AOS -->
     <link rel="stylesheet"
         href="https://unpkg.com/aos@2.3.4/dist/aos.css">
-
 </head>
 
 <body>
@@ -63,899 +62,785 @@
         🔥 LIMITED TIME OFFER: Get 50% OFF on all Web & Mobile App services! 🔥 Use code MOUAD50 🔥
       </div>
     </div>
+
     <!-- Custom Cursor -->
     <div class="cursor"></div>
 
-    <!-- Particles -->
+    <!-- Particles Background -->
     <div id="particles-js"></div>
 
-    <!-- Navbar -->
+    <!-- Floating Pill Navbar -->
     <header>
+        <nav class="navbar">
+            <a href="#home" class="logo">
+                <div class="logo-badge">M</div>
+                <span class="logo-text">Mouad</span><span class="logo-dot">.</span><span class="logo-dev">Dev</span>
+            </a>
 
-<nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#home" class="active"><i class="fa-solid fa-house"></i> <span data-i18n="nav.home">Home</span></a></li>
+                <li><a href="#about"><i class="fa-solid fa-user"></i> <span data-i18n="nav.about">About</span></a></li>
+                <li><a href="#services"><i class="fa-solid fa-layer-group"></i> <span data-i18n="nav.services">Services</span></a></li>
+                <li><a href="#skills"><i class="fa-solid fa-code"></i> <span data-i18n="nav.skills">Skills</span></a></li>
+                <li><a href="#projects"><i class="fa-solid fa-folder-open"></i> <span data-i18n="nav.projects">Projects</span></a></li>
+                <li><a href="#timeline"><i class="fa-solid fa-calendar-days"></i> <span data-i18n="nav.timeline">Timeline</span></a></li>
+                <li><a href="#faq"><i class="fa-solid fa-circle-question"></i> <span data-i18n="nav.faq">FAQ</span></a></li>
+                <li><a href="#contact"><i class="fa-solid fa-envelope"></i> <span data-i18n="nav.contact">Contact</span></a></li>
+                <li><a href="projects.html"><i class="fa-solid fa-cubes"></i> <span data-i18n="nav.all_projects">All Projects</span></a></li>
+            </ul>
 
-    <a href="#home" class="logo">
-        <span class="logo-text">Mouad</span><span class="logo-dot">.</span><span class="logo-dev">Dev</span>
-    </a>
-
-    <ul class="nav-links">
-        <li><a href="#home" class="active" data-i18n="nav.home">Home</a></li>
-        <li><a href="#about" data-i18n="nav.about">About</a></li>
-        <li><a href="#services" data-i18n="nav.services">Services</a></li>
-        <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
-        <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
-        <li><a href="#timeline" data-i18n="nav.timeline">Timeline</a></li>
-        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-        <li><a href="projects.html" data-i18n="nav.all_projects">All Projects</a></li>
-    </ul>
-
-    <div class="nav-actions">
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-            <i class="fas fa-moon"></i>
-        </button>
-        <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">
-            <span id="lang-label">AR</span>
-        </button>
-        <a href="#contact" class="hire-btn" data-i18n="nav.hire">
-            Hire Me
-        </a>
-        <div class="menu-btn">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-    </div>
-</nav>
-
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">
+                    <span id="lang-label">AR</span>
+                </button>
+                <a href="#contact" class="hire-btn">
+                    <span data-i18n="nav.hire">Hire Me</span> <i class="fas fa-arrow-right"></i>
+                </a>
+                <div class="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <!-- Hero -->
+    <!-- Hero Section -->
     <section id="home">
+        <div class="hero">
+            <!-- Hero Left -->
+            <div class="hero-left" data-aos="fade-right">
+                <div class="hero-welcome-badge">
+                    <span data-i18n="hero.welcome">👋 Hello, Welcome To My World</span>
+                </div>
 
-    <div class="hero">
+                <h1>
+                    <span data-i18n="hero.greeting">Hi, I'm</span><br>
+                    <span class="hero-title-accent" data-i18n="hero.name">Mouad.Dev</span>
+                </h1>
 
-        <!-- Left -->
-        <div class="hero-left">
+                <div class="hero-roles">
+                    <span>Full Stack Developer</span>
+                    <span class="dot">•</span>
+                    <span>Web & Mobile</span>
+                    <span class="dot">•</span>
+                    <span>Graphic Designer</span>
+                    <span class="dot">•</span>
+                    <span>Content Creator</span>
+                </div>
 
-            <p class="hero-top" data-i18n="hero.welcome">
-                👋 Hello, Welcome To My World
-            </p>
+                <p class="hero-promo" data-i18n="hero.promo">🎉 Limited Offer: Use code <strong>MOUAD50</strong> and save 50% on your first project!</p>
 
-            <h1>
-                <span data-i18n="hero.greeting">Hi, I'm</span> <span class="logo-dev" data-i18n="hero.name">Mouad.Dev</span>
-            </h1>
+                <h2>
+                    <span id="typing"></span>
+                </h2>
 
-            <p class="hero-promo" data-i18n="hero.promo">🎉 Limited Offer: Use code <strong>MOUAD50</strong> and save 50% on your first project!</p>
+                <p class="hero-description" data-i18n="hero.description">
+                    I build premium websites, Android applications,
+                    AI solutions and modern digital experiences
+                    focused on performance, creativity and user experience.
+                </p>
 
-            <h2>
-                <span id="typing"></span>
-            </h2>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <span data-i18n="hero.btn2">Get In Touch</span> <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#projects" class="btn btn-outline">
+                        <i class="fas fa-folder-open"></i> <span data-i18n="hero.btn1">Explore My Work</span>
+                    </a>
+                </div>
 
-            <p class="hero-description" data-i18n="hero.description">
-                I build premium websites, Android applications,
-                AI solutions and modern digital experiences
-                focused on performance, creativity and user experience.
-            </p>
-
-            <div class="hero-buttons">
                 <div class="social-links">
-
-<a href="https://github.com/mouadch097-cyber" target="_blank" class="github">
-<i class="fab fa-github"></i>
-</a>
-
-<a href="https://www.instagram.com/mouad_cherrati" target="_blank" class="instagram">
-<i class="fab fa-instagram"></i>
-</a>
-
-<a href="https://www.tiktok.com/@novix_tech9" target="_blank" class="tiktok">
-<i class="fab fa-tiktok"></i>
-</a>
-
-<a href="https://www.youtube.com/@Mouad.dev07" target="_blank" class="youtube">
-<i class="fab fa-youtube"></i>
-</a>
-
-<a href="https://t.me/mouadch" target="_blank" class="telegram">
-<i class="fab fa-telegram"></i>
-</a>
-
-<a href="https://wa.me/213540796620" target="_blank" class="whatsapp">
-<i class="fab fa-whatsapp"></i>
-</a>
-
-<a href="mailto:mouadch097@gmail.com" class="email">
-<i class="fas fa-envelope"></i>
-</a>
-
-</div>
-
-                <a href="#projects" class="btn btn-primary" data-i18n="hero.btn1">
-                    🚀 Explore My Work
-                </a>
-
-                <a href="#contact" class="btn btn-outline" data-i18n="hero.btn2">
-                    📩 Hire Me
-                </a>
-
+                    <a href="https://github.com/mouadch097-cyber" target="_blank" class="github" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mouad_cherrati" target="_blank" class="instagram" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@novix_tech9" target="_blank" class="tiktok" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@Mouad.dev07" target="_blank" class="youtube" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://t.me/mouadch" target="_blank" class="telegram" aria-label="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="https://wa.me/213540796620" target="_blank" class="whatsapp" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="mailto:mouadch097@gmail.com" class="email" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
             </div>
 
-        </div>
-
-        <!-- Right -->
-
-        <div class="hero-right">
-
-<div class="hero-circle">
-
-    <div class="hero-ring"></div>
-
-    <div class="hero-logo">
-        <img src="./assets/images/photo_2026-07-19_17-45-34-removebg-preview.png" alt="Mouad.Dev">
-    </div>
-
-    <span class="tech html">
-        <i class="fa-brands fa-html5"></i>
-        HTML5
-    </span>
-
-    <span class="tech css">
-        <i class="fa-brands fa-css3-alt"></i>
-        CSS3
-    </span>
-
-    <span class="tech js">
-        <i class="fa-brands fa-js"></i>
-        JavaScript
-    </span>
-
-    <span class="tech firebase">
-        <img src="./assets/images/firebase.png">
-        Firebase
-    </span>
-
-    <span class="tech flutter">
-        <img src="./assets/images/icons8-flutter-logo-48.png">
-        Flutter
-    </span>
-
-</div>
-
-    </div>
-
-</section>
-    <!-- About -->
-   <section id="about">
-
-    <div class="section-title">
-
-        <span>ABOUT ME</span>
-
-        <h2>Who is Mouad.Dev?</h2>
-
-    </div>
-
-    <div class="about-container">
-
-        <div class="about-card">
-
-            <h3>🚀 Digital Creator</h3>
-
-            <p>
-                I'm Mouad Dev, a Full Stack Web Developer,
-                Mobile App Developer, AI Developer,
-                Graphic Designer and Video Editor.
-
-                I create premium digital experiences
-                combining beautiful design,
-                clean code and high performance.
-            </p>
-
-        </div>
-
-        <div class="about-stats">
-
-            <div class="stat-box">
-
-                <h2>3+</h2>
-
-                <p>Years Experience</p>
-
-            </div>
-
-            <div class="stat-box">
-
-                <h2>25+</h2>
-
-                <p>Projects</p>
-
-            </div>
-
-            <div class="stat-box">
-
-                <h2>15+</h2>
-
-                <p>Happy Clients</p>
-
-            </div>
-
-            <div class="stat-box">
-
-                <h2>100%</h2>
-
-                <p>Commitment</p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-    <!-- Services -->
-    <section id="services">
-
-    <div class="section-title">
-        <span>MY SERVICES</span>
-        <h2>What I Can Do For You</h2>
-    </div>
-
-    <div class="services-grid">
-
-        <!-- Service 1 -->
-        <div class="service-card">
-            <span class="promo-badge" data-i18n="services.badge">50% OFF</span>
-            <i class="fas fa-globe service-icon"></i>
-            <h3 class="service-title" data-i18n="services.s1_title">Normal Website</h3>
-            <p class="service-desc" data-i18n="services.s1_desc">A simple, clean, responsive website for personal or business use.</p>
-            <div class="service-price">
-                <span class="price-original">10,000 DA</span>
-                <span class="price-promo">5,000 DA</span>
-            </div>
-            <a href="#contact" class="btn-service" data-i18n="services.order_now">Order Now</a>
-        </div>
-
-        <!-- Service 2 -->
-        <div class="service-card">
-            <span class="promo-badge" data-i18n="services.badge">50% OFF</span>
-            <i class="fas fa-palette service-icon"></i>
-            <h3 class="service-title" data-i18n="services.s2_title">Logo Design</h3>
-            <p class="service-desc" data-i18n="services.s2_desc">Professional custom logo design tailored to your brand identity.</p>
-            <div class="service-price">
-                <span class="price-original">2,000 DA</span>
-                <span class="price-promo">1,000 DA</span>
-            </div>
-            <a href="#contact" class="btn-service" data-i18n="services.order_now">Order Now</a>
-        </div>
-
-        <!-- Service 3 -->
-        <div class="service-card">
-            <span class="promo-badge" data-i18n="services.badge">50% OFF</span>
-            <i class="fas fa-mobile-screen service-icon"></i>
-            <h3 class="service-title" data-i18n="services.s3_title">Mobile Application</h3>
-            <p class="service-desc" data-i18n="services.s3_desc">Custom mobile app (Android/iOS) built with Flutter & Firebase.</p>
-            <div class="service-price">
-                <span class="price-original">50,000 DA</span>
-                <span class="price-promo">25,000 DA</span>
-            </div>
-            <a href="#contact" class="btn-service" data-i18n="services.order_now">Order Now</a>
-        </div>
-
-        <!-- Service 4 -->
-        <div class="service-card">
-            <span class="promo-badge" data-i18n="services.badge">50% OFF</span>
-            <i class="fas fa-laptop-code service-icon"></i>
-            <h3 class="service-title" data-i18n="services.s4_title">Complete Website 100%</h3>
-            <p class="service-desc" data-i18n="services.s4_desc">Full-featured website with advanced features, admin panel, and SEO.</p>
-            <div class="service-price">
-                <span class="price-original">25,000 DA</span>
-                <span class="price-promo">12,500 DA</span>
-            </div>
-            <a href="#contact" class="btn-service" data-i18n="services.order_now">Order Now</a>
-        </div>
-
-        <!-- Service 5 -->
-        <div class="service-card">
-            <span class="promo-badge" data-i18n="services.badge">50% OFF</span>
-            <i class="fas fa-rocket service-icon"></i>
-            <h3 class="service-title" data-i18n="services.s5_title">Complete Mobile App 100%</h3>
-            <p class="service-desc" data-i18n="services.s5_desc">Full mobile app with backend, admin dashboard, and app store publishing.</p>
-            <div class="service-price">
-                <span class="price-original">100,000 DA</span>
-                <span class="price-promo">50,000 DA</span>
-            </div>
-            <a href="#contact" class="btn-service" data-i18n="services.order_now">Order Now</a>
-        </div>
-
-    </div>
-
-</section>
-
-    <!-- Skills -->
-    <section id="skills">
-
-    <div class="section-title">
-        <span>MY SKILLS</span>
-        <h2>Technologies I Use</h2>
-    </div>
-
-    <div class="skills-grid">
-
-        <div class="skill-card">
-            <i class="fa-brands fa-html5"></i>
-            <h3>HTML5</h3>
-            <p>★★★★★</p>
-        </div>
-
-        <div class="skill-card">
-            <i class="fa-brands fa-css3-alt"></i>
-            <h3>CSS3</h3>
-            <p>★★★★★</p>
-        </div>
-
-        <div class="skill-card">
-            <i class="fa-brands fa-js"></i>
-            <h3>JavaScript</h3>
-            <p>★★★★★</p>
-        </div>
-
-        <div class="skill-card">
-            <i class="fa-brands fa-python"></i>
-            <h3>Python</h3>
-            <p>★★★★☆</p>
-        </div>
-
-        <div class="skill-card">
-            <i class="fa-solid fa-mobile-screen-button"></i>
-            <h3>Flutter</h3>
-            <p>★★★★★</p>
-        </div>
-
-        <div class="skill-card">
-            <i class="fa-solid fa-fire"></i>
-            <h3>Firebase</h3>
-            <p>★★★★☆</p>
-        </div>
-
-        <div class="skill-card">
-            <i class="fa-brands fa-git-alt"></i>
-            <h3>Git</h3>
-            <p>★★★★★</p>
-        </div>
-
-        <div class="skill-card">
-            <i class="fa-brands fa-github"></i>
-            <h3>GitHub</h3>
-            <p>★★★★★</p>
-        </div>
-
-        <div class="skill-card">
-            <i class="fa-solid fa-robot"></i>
-            <h3>Google AI Studio</h3>
-            <p>★★★★★</p>
-        </div>
-
-    </div>
-
-</section>
-<section id="projects" class="projects">
-
-    <div class="section-title">
-
-        <span>Portfolio</span>
-
-        <h2>Featured Projects</h2>
-
-        <p>
-            A selection of my latest projects showcasing modern web development,
-            UI design, and creative digital solutions.
-        </p>
-
-    </div>
-
-    <div class="projects-grid">
-
-        <!-- Idara Pro -->
-
-        <div class="project-card app">
-
-            <div class="project-image app-image">
-
-                <img src="./assets/images/idara-pro.jpg" alt="Idara Pro" class="app-icon">
-
-            </div>
-
-            <h3>Idara Pro</h3>
-
-            <p>
-                A comprehensive management application designed to streamline daily administrative tasks with a clean and intuitive interface.
-            </p>
-
-            <div class="project-tech">
-
-                <span>Android</span>
-
-                <span>Mobile</span>
-
-                <span>Google Play</span>
-
-            </div>
-
-            <div class="project-links">
-
-                <a href="https://play.google.com/store/apps/details?id=com.idarapro.idara_pro" target="_blank" rel="noopener noreferrer" class="playstore-btn">
-                    <i class="fab fa-google-play"></i> View on Google Play
-                </a>
-
-            </div>
-
-        </div>
-
-        <!-- Muslim Note -->
-
-        <div class="project-card app">
-
-            <div class="project-image app-image">
-
-                <img src="./assets/images/muslim-note.png" alt="Muslim Note" class="app-icon">
-
-            </div>
-
-            <h3>Muslim Note</h3>
-
-            <p>
-                A spiritual companion app offering prayer times, Qibla direction, Quranic Surahs, and a smart Tasbih to support your daily worship.
-            </p>
-
-            <div class="project-tech">
-
-                <span>Android</span>
-
-                <span>Mobile</span>
-
-                <span>Google Play</span>
-
-            </div>
-
-            <div class="project-links">
-
-                <a href="https://play.google.com/store/apps/details?id=com.muslimnote.app" target="_blank" rel="noopener noreferrer" class="playstore-btn">
-                    <i class="fab fa-google-play"></i> View on Google Play
-                </a>
-
-            </div>
-
-        </div>
-
-        <!-- Coach DZK -->
-
-        <div class="project-card">
-
-            <img src="./assets/images/coach-dzk.png" alt="Coach DZK">
-
-            <h3>Coach DZK</h3>
-
-            <p>
-                Professional fitness and boxing coaching platform featuring personalized workout programs, trainer credentials, and seamless client conversion.
-            </p>
-
-            <div class="project-tech">
-
-                <span>React</span>
-
-                <span>Vite</span>
-
-                <span>Tailwind CSS</span>
-
-                <span>Node.js</span>
-
-            </div>
-
-            <div class="project-links">
-
-                <a href="https://coach-dzk-website-09.vercel.app/" target="_blank">
-                    Live Demo
-                </a>
-
-                <a href="https://github.com/mouadch097-cyber/coach_dzk-website" target="_blank">
-                    GitHub
-                </a>
-
-            </div>
-
-        </div>
-
-        <!-- Distributeur Chips 09 -->
-
-        <div class="project-card">
-
-            <img src="./assets/images/distributeur-chips.png" alt="Distributeur Chips 09">
-
-            <h3>Distributeur Chips 09</h3>
-
-            <p>
-                Modern wholesale snack and chips distribution platform in Algeria offering brand catalogs, bulk orders, and B2B client inquiries.
-            </p>
-
-            <div class="project-tech">
-
-                <span>Next.js</span>
-
-                <span>TypeScript</span>
-
-                <span>Tailwind CSS</span>
-
-                <span>Prisma</span>
-
-            </div>
-
-            <div class="project-links">
-
-                <a href="https://distributeur-chips-09.vercel.app" target="_blank">
-                    Live Demo
-                </a>
-
-                <a href="https://github.com/mouadch097-cyber/distributeur-chips-09" target="_blank">
-                    GitHub
-                </a>
-
-            </div>
-
-        </div>
-
-        <!-- Hotel Find -->
-
-        <div class="project-card">
-
-            <img src="./assets/images/page sing up (2).jpg" alt="Hotel Find">
-
-            <h3>Hotel Find</h3>
-
-            <p>
-                Modern hotel booking website with premium UI and responsive design.
-            </p>
-
-            <div class="project-tech">
-
-                <span>HTML5</span>
-
-                <span>CSS3</span>
-
-                <span>JavaScript</span>
-
-            </div>
-
-            <div class="project-links">
-
-                <a href="https://mouadch097-cyber.github.io/hotel-find/" target="_blank">
-                    Live Demo
-                </a>
-
-                <a href="https://github.com/mouadch097-cyber/hotel-find" target="_blank">
-                    GitHub
-                </a>
-
-            </div>
-
-        </div>
-
-        <!-- Login -->
-
-        <div class="project-card">
-
-            <img src="./assets/images/page sing up (1).jpg" alt="Login">
-
-            <h3>Login & Sign Up</h3>
-
-            <p>
-                Responsive authentication interface with smooth modern design.
-            </p>
-
-            <div class="project-tech">
-
-                <span>HTML5</span>
-
-                <span>CSS3</span>
-
-                <span>JavaScript</span>
-
-            </div>
-
-            <div class="project-links">
-
-                <a href="https://mouadch097-cyber.github.io/login-singup-page_test/" target="_blank">
-                    Live Demo
-                </a>
-
-                <a href="https://github.com/mouadch097-cyber/login-singup-page_test" target="_blank">
-                    GitHub
-                </a>
-
-            </div>
-
-        </div>
-
-        <!-- Future Chance -->
-
-        <div class="project-card">
-
-            <img src="./assets/images/photo_2026-07-20_22-39-02.jpg" alt="Future Chance">
-
-            <h3>Future Chance Formation</h3>
-
-            <p>
-                Professional training center website with elegant responsive layout.
-            </p>
-
-            <div class="project-tech">
-
-                <span>HTML5</span>
-
-                <span>CSS3</span>
-
-                <span>JavaScript</span>
-
-            </div>
-
-            <div class="project-links">
-
-                <a href="https://mouadch097-cyber.github.io/futur-chance_formation_web/" target="_blank">
-                    Live Demo
-                </a>
-
-                <a href="https://github.com/mouadch097-cyber/futur-chance_formation_web" target="_blank">
-                    GitHub
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="all-projects-btn">
-
-        <a href="projects.html" class="btn-primary">
-
-            View All Projects
-
-            <i class="fas fa-arrow-right"></i>
-
-        </a>
-
-    </div>
-
-</section>
-    <!-- Timeline -->
-    <section id="timeline">
-
-    <div class="section-title">
-        <span>MY JOURNEY</span>
-        <h2>Career Timeline</h2>
-    </div>
-
-    <div class="timeline">
-
-        <div class="timeline-item left">
-            <div class="timeline-content">
-                <span>2023</span>
-                <h3>Started Learning</h3>
-                <p>Started learning HTML, CSS and JavaScript.</p>
+            <!-- Hero Right -->
+            <div class="hero-right" data-aos="fade-left">
+                <div class="hero-illustration-wrapper">
+                    <img src="assets/images/hero_illustration_dark.png" alt="Mouad.Dev Developer" class="hero-illustration hero-dark-img">
+                    <img src="assets/images/hero_illustration_light.png" alt="Mouad.Dev Developer" class="hero-illustration hero-light-img">
+                </div>
             </div>
         </div>
 
-        <div class="timeline-item right">
-            <div class="timeline-content">
-                <span>2024</span>
-                <h3>Freelance Developer</h3>
-                <p>Built websites and mobile apps for clients.</p>
-            </div>
-        </div>
-
-        <div class="timeline-item left">
-            <div class="timeline-content">
-                <span>2025</span>
-                <h3>AI Projects</h3>
-                <p>Developed AI-powered applications and automation tools.</p>
-            </div>
-        </div>
-
-        <div class="timeline-item right">
-            <div class="timeline-content">
-                <span>2026</span>
-                <h3>Mouad.Dev</h3>
-                <p>Created a premium personal brand and portfolio.</p>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-    <!-- Testimonials -->
-    <section id="testimonials">
-
-    <div class="section-title">
-        <span>TESTIMONIALS</span>
-        <h2>What Clients Say</h2>
-    </div>
-
-    <div class="testimonials-grid">
-
-        <div class="testimonial-card">
-
-            <img src="assets/images/client1.jpg" alt="Client">
-
-            <h3>Ahmed Ali</h3>
-
-            <div class="stars">
-                ⭐⭐⭐⭐⭐
+        <!-- Stats Counter Bar (Matching Reference Bar) -->
+        <div class="stats-counter-bar" data-aos="fade-up">
+            <div class="stat-item">
+                <div class="stat-icon-wrapper">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="stat-info">
+                    <span class="stat-number">3+</span>
+                    <span class="stat-label" data-i18n="stats.exp_label">Years of Experience</span>
+                </div>
             </div>
 
-            <p>
-                Mouad delivered an outstanding website.
-                Professional, fast and creative.
-            </p>
-
-        </div>
-
-        <div class="testimonial-card">
-
-            <img src="assets/images/client2.jpg" alt="Client">
-
-            <h3>Sarah Smith</h3>
-
-            <div class="stars">
-                ⭐⭐⭐⭐⭐
+            <div class="stat-item">
+                <div class="stat-icon-wrapper">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+                <div class="stat-info">
+                    <span class="stat-number">25+</span>
+                    <span class="stat-label" data-i18n="stats.proj_label">Completed Projects</span>
+                </div>
             </div>
 
-            <p>
-                Excellent communication and amazing UI design.
-                Highly recommended.
-            </p>
-
-        </div>
-
-        <div class="testimonial-card">
-
-            <img src="assets/images/client3.jpg" alt="Client">
-
-            <h3>Karim Hassan</h3>
-
-            <div class="stars">
-                ⭐⭐⭐⭐⭐
+            <div class="stat-item">
+                <div class="stat-icon-wrapper">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <div class="stat-info">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label" data-i18n="stats.sat_label">Client Satisfaction</span>
+                </div>
             </div>
 
-            <p>
-                High-quality work with clean code and
-                modern animations.
-            </p>
-
+            <div class="stat-item">
+                <div class="stat-icon-wrapper">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+                <div class="stat-info">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label" data-i18n="stats.sup_label">Available Support</span>
+                </div>
+            </div>
         </div>
-
-    </div>
-
-</section>
-
-    <!-- FAQ -->
-    <section id="faq">
-
     </section>
 
-    <!-- Contact -->
-    <section id="contact">
-
-    <div class="section-title">
-        <span>CONTACT</span>
-        <h2>Let's Work Together</h2>
-    </div>
-
-    <div class="contact-container">
-
-        <!-- Contact Info -->
-
-        <div class="contact-info">
-
-            <div class="contact-card">
-                <i class="fas fa-envelope"></i>
-                <div>
-                    <h3>Email</h3>
-                    <p>mouadch097@gmail.com</p>
-                </div>
-            </div>
-
-            <div class="contact-card">
-                <i class="fab fa-whatsapp"></i>
-                <div>
-                    <h3>WhatsApp</h3>
-                    <p>+213 540 79 66 20</p>
-                </div>
-            </div>
-
-            <div class="contact-card">
-                <i class="fab fa-github"></i>
-                <div>
-                    <h3>GitHub</h3>
-                    <p>github.com/mouadch097-cyber</p>
-                </div>
-            </div>
-
-            <div class="contact-card">
-                <i class="fab fa-telegram"></i>
-                <div>
-                    <h3>Telegram</h3>
-                    <p>@mouadch</p>
-                </div>
-            </div>
-
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-title" data-aos="fade-up">
+            <span class="section-kicker">— ABOUT ME</span>
+            <h2>Who is <span class="accent">Mouad.Dev</span>?</h2>
         </div>
 
-        <!-- Contact Form -->
+        <div class="about-container">
+            <div class="about-card" data-aos="fade-right">
+                <h3>🚀 Digital Creator & Problem Solver</h3>
+                <p>
+                    I'm Mouad Dev, a passionate Full Stack Web Developer, Mobile App Developer,
+                    AI Solution Builder, and Graphic Designer.
+                    <br><br>
+                    I specialize in transforming creative concepts into robust, high-performance digital products.
+                    From responsive corporate web apps to cross-platform mobile experiences with Flutter,
+                    every project is built with clean code, scalability, and exceptional UI/UX standards.
+                </p>
+            </div>
 
-        <form id="contact-form">
+            <div class="about-stats" data-aos="fade-left">
+                <div class="stat-box">
+                    <h2>3+</h2>
+                    <p>Years Experience</p>
+                </div>
+                <div class="stat-box">
+                    <h2>25+</h2>
+                    <p>Projects Delivered</p>
+                </div>
+                <div class="stat-box">
+                    <h2>15+</h2>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="stat-box">
+                    <h2>100%</h2>
+                    <p>Commitment & Quality</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Your Name"
-                required>
+    <!-- Services Section -->
+    <section id="services">
+        <div class="section-title" data-aos="fade-up">
+            <span class="section-kicker">— WHAT I DO</span>
+            <h2>What I Can <span class="accent">Do For You</span></h2>
+            <p>High-quality services tailored to boost your business and digital presence with limited-time 50% discount pricing.</p>
+        </div>
 
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Your Email"
-                required>
+        <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="50">
+                <span class="promo-badge" data-i18n="services.badge">50% OFF</span>
+                <i class="fas fa-globe service-icon"></i>
+                <h3 class="service-title" data-i18n="services.s1_title">Normal Website</h3>
+                <p class="service-desc" data-i18n="services.s1_desc">A simple, clean, responsive website for personal or business use.</p>
+                <div class="service-price">
+                    <span class="price-original">10,000 DA</span>
+                    <span class="price-promo">5,000 DA</span>
+                </div>
+                <a href="#contact" class="btn-service" data-i18n="services.order_now">Order Now</a>
+            </div>
 
-            <input
-                type="text"
-                id="subject"
-                name="subject"
-                placeholder="Subject"
-                required>
+            <!-- Service 2 -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <span class="promo-badge" data-i18n="services.badge">50% OFF</span>
+                <i class="fas fa-palette service-icon"></i>
+                <h3 class="service-title" data-i18n="services.s2_title">Logo Design</h3>
+                <p class="service-desc" data-i18n="services.s2_desc">Professional custom logo design tailored to your brand identity.</p>
+                <div class="service-price">
+                    <span class="price-original">2,000 DA</span>
+                    <span class="price-promo">1,000 DA</span>
+                </div>
+                <a href="#contact" class="btn-service" data-i18n="services.order_now">Order Now</a>
+            </div>
 
-            <textarea
-                id="message"
-                name="message"
-                rows="6"
-                placeholder="Write your message..."
-                required></textarea>
+            <!-- Service 3 -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="150">
+                <span class="promo-badge" data-i18n="services.badge">50% OFF</span>
+                <i class="fas fa-mobile-screen service-icon"></i>
+                <h3 class="service-title" data-i18n="services.s3_title">Mobile Application</h3>
+                <p class="service-desc" data-i18n="services.s3_desc">Custom mobile app (Android/iOS) built with Flutter & Firebase.</p>
+                <div class="service-price">
+                    <span class="price-original">50,000 DA</span>
+                    <span class="price-promo">25,000 DA</span>
+                </div>
+                <a href="#contact" class="btn-service" data-i18n="services.order_now">Order Now</a>
+            </div>
 
-            <button type="submit" class="btn btn-primary">
-                Send Message 🚀
-            </button>
+            <!-- Service 4 -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <span class="promo-badge" data-i18n="services.badge">50% OFF</span>
+                <i class="fas fa-laptop-code service-icon"></i>
+                <h3 class="service-title" data-i18n="services.s4_title">Complete Website 100%</h3>
+                <p class="service-desc" data-i18n="services.s4_desc">Full-featured website with advanced features, admin panel, and SEO.</p>
+                <div class="service-price">
+                    <span class="price-original">25,000 DA</span>
+                    <span class="price-promo">12,500 DA</span>
+                </div>
+                <a href="#contact" class="btn-service" data-i18n="services.order_now">Order Now</a>
+            </div>
 
-            <p id="status"></p>
+            <!-- Service 5 -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="250">
+                <span class="promo-badge" data-i18n="services.badge">50% OFF</span>
+                <i class="fas fa-rocket service-icon"></i>
+                <h3 class="service-title" data-i18n="services.s5_title">Complete Mobile App 100%</h3>
+                <p class="service-desc" data-i18n="services.s5_desc">Full mobile app with backend, admin dashboard, and app store publishing.</p>
+                <div class="service-price">
+                    <span class="price-original">100,000 DA</span>
+                    <span class="price-promo">50,000 DA</span>
+                </div>
+                <a href="#contact" class="btn-service" data-i18n="services.order_now">Order Now</a>
+            </div>
+        </div>
+    </section>
 
-        </form>
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="section-title" data-aos="fade-up">
+            <span class="section-kicker">— MY TECH STACK</span>
+            <h2>Technologies <span class="accent">& Tools</span></h2>
+        </div>
 
-    </div>
+        <div class="skills-grid">
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="50">
+                <i class="fa-brands fa-html5"></i>
+                <h3>HTML5</h3>
+                <p>★★★★★</p>
+            </div>
 
-</section>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fa-brands fa-css3-alt"></i>
+                <h3>CSS3</h3>
+                <p>★★★★★</p>
+            </div>
+
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="150">
+                <i class="fa-brands fa-js"></i>
+                <h3>JavaScript</h3>
+                <p>★★★★★</p>
+            </div>
+
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fa-brands fa-python"></i>
+                <h3>Python</h3>
+                <p>★★★★☆</p>
+            </div>
+
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="250">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <h3>Flutter</h3>
+                <p>★★★★★</p>
+            </div>
+
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                <i class="fa-solid fa-fire"></i>
+                <h3>Firebase</h3>
+                <p>★★★★☆</p>
+            </div>
+
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="350">
+                <i class="fa-brands fa-git-alt"></i>
+                <h3>Git</h3>
+                <p>★★★★★</p>
+            </div>
+
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+                <i class="fa-brands fa-github"></i>
+                <h3>GitHub</h3>
+                <p>★★★★★</p>
+            </div>
+
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="450">
+                <i class="fa-solid fa-robot"></i>
+                <h3>Google AI Studio</h3>
+                <p>★★★★★</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="projects-header" data-aos="fade-up">
+            <div class="section-title" style="text-align: left; margin: 0;">
+                <span class="section-kicker">— PORTFOLIO</span>
+                <h2>Featured <span class="accent">Projects</span></h2>
+                <p>A selection of my latest projects showcasing modern web development, UI design, and creative digital solutions.</p>
+            </div>
+            <div>
+                <a href="projects.html" class="btn btn-outline" style="border-radius: 50px;">
+                    <span>View All Projects</span> <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Idara Pro -->
+            <div class="project-card app" data-aos="fade-up">
+                <div class="project-image app-image">
+                    <img src="./assets/images/idara-pro.jpg" alt="Idara Pro" class="app-icon">
+                </div>
+                <div class="project-content">
+                    <h3>Idara Pro</h3>
+                    <p>A comprehensive management application designed to streamline daily administrative tasks with a clean and intuitive interface.</p>
+                    <div class="project-tech">
+                        <span>Android</span>
+                        <span>Mobile</span>
+                        <span>Google Play</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://play.google.com/store/apps/details?id=com.idarapro.idara_pro" target="_blank" rel="noopener noreferrer" class="playstore-btn">
+                            <i class="fab fa-google-play"></i> View on Google Play
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Muslim Note -->
+            <div class="project-card app" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-image app-image">
+                    <img src="./assets/images/muslim-note.png" alt="Muslim Note" class="app-icon">
+                </div>
+                <div class="project-content">
+                    <h3>Muslim Note</h3>
+                    <p>A spiritual companion app offering prayer times, Qibla direction, Quranic Surahs, and a smart Tasbih to support your daily worship.</p>
+                    <div class="project-tech">
+                        <span>Android</span>
+                        <span>Mobile</span>
+                        <span>Google Play</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://play.google.com/store/apps/details?id=com.muslimnote.app" target="_blank" rel="noopener noreferrer" class="playstore-btn">
+                            <i class="fab fa-google-play"></i> View on Google Play
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coach DZK -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="150">
+                <div class="project-image">
+                    <img src="./assets/images/coach-dzk.png" alt="Coach DZK">
+                </div>
+                <div class="project-content">
+                    <h3>Coach DZK</h3>
+                    <p>Professional fitness and boxing coaching platform featuring personalized workout programs, trainer credentials, and seamless client conversion.</p>
+                    <div class="project-tech">
+                        <span>React</span>
+                        <span>Vite</span>
+                        <span>Tailwind CSS</span>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://coach-dzk-website-09.vercel.app/" target="_blank">Live Demo</a>
+                        <a href="https://github.com/mouadch097-cyber/coach_dzk-website" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Distributeur Chips 09 -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-image">
+                    <img src="./assets/images/distributeur-chips.png" alt="Distributeur Chips 09">
+                </div>
+                <div class="project-content">
+                    <h3>Distributeur Chips 09</h3>
+                    <p>Modern wholesale snack and chips distribution platform in Algeria offering brand catalogs, bulk orders, and B2B client inquiries.</p>
+                    <div class="project-tech">
+                        <span>Next.js</span>
+                        <span>TypeScript</span>
+                        <span>Tailwind CSS</span>
+                        <span>Prisma</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://distributeur-chips-09.vercel.app" target="_blank">Live Demo</a>
+                        <a href="https://github.com/mouadch097-cyber/distributeur-chips-09" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hotel Find -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="250">
+                <div class="project-image">
+                    <img src="./assets/images/page sing up (2).jpg" alt="Hotel Find">
+                </div>
+                <div class="project-content">
+                    <h3>Hotel Find</h3>
+                    <p>Modern hotel booking website with premium UI and responsive design.</p>
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://mouadch097-cyber.github.io/hotel-find/" target="_blank">Live Demo</a>
+                        <a href="https://github.com/mouadch097-cyber/hotel-find" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Login & Sign Up -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-image">
+                    <img src="./assets/images/page sing up (1).jpg" alt="Login">
+                </div>
+                <div class="project-content">
+                    <h3>Login & Sign Up</h3>
+                    <p>Responsive authentication interface with smooth modern design.</p>
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://mouadch097-cyber.github.io/login-singup-page_test/" target="_blank">Live Demo</a>
+                        <a href="https://github.com/mouadch097-cyber/login-singup-page_test" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Future Chance -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="350">
+                <div class="project-image">
+                    <img src="./assets/images/photo_2026-07-20_22-39-02.jpg" alt="Future Chance">
+                </div>
+                <div class="project-content">
+                    <h3>Future Chance Formation</h3>
+                    <p>Professional training center website with elegant responsive layout.</p>
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://mouadch097-cyber.github.io/futur-chance_formation_web/" target="_blank">Live Demo</a>
+                        <a href="https://github.com/mouadch097-cyber/futur-chance_formation_web" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="all-projects-btn" data-aos="fade-up">
+            <a href="projects.html" class="btn btn-primary">
+                <span>View All Projects</span> <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline">
+        <div class="section-title" data-aos="fade-up">
+            <span class="section-kicker">— MY JOURNEY</span>
+            <h2>Career <span class="accent">Timeline</span></h2>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item left" data-aos="fade-right">
+                <div class="timeline-content">
+                    <span>2023</span>
+                    <h3>Started Learning</h3>
+                    <p>Mastered modern web development fundamentals including HTML5, CSS3, JavaScript and responsive design architectures.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item right" data-aos="fade-left">
+                <div class="timeline-content">
+                    <span>2024</span>
+                    <h3>Freelance Developer</h3>
+                    <p>Built custom responsive websites and interactive client portals with clean code and high performance.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item left" data-aos="fade-right">
+                <div class="timeline-content">
+                    <span>2025</span>
+                    <h3>Mobile & AI Projects</h3>
+                    <p>Expanded into Flutter mobile development, Google Cloud integration, and AI-powered solutions.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item right" data-aos="fade-left">
+                <div class="timeline-content">
+                    <span>2026</span>
+                    <h3>Mouad.Dev Brand</h3>
+                    <p>Established a recognized personal brand delivering top-tier web, Android, and design services globally.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="section-title" data-aos="fade-up">
+            <span class="section-kicker">— TESTIMONIALS</span>
+            <h2>What Clients <span class="accent">Say</span></h2>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="assets/images/client1.jpg" alt="Ahmed Ali">
+                <h3>Ahmed Ali</h3>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Mouad delivered an outstanding website. Professional, fast, and creative with great attention to detail."</p>
+            </div>
+
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/images/client2.jpg" alt="Sarah Smith">
+                <h3>Sarah Smith</h3>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Excellent communication and amazing UI design. The website exceeded my expectations in every way."</p>
+            </div>
+
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                <img src="assets/images/client3.jpg" alt="Karim Hassan">
+                <h3>Karim Hassan</h3>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"High-quality work with clean code, modern animations, and full mobile responsiveness. Highly recommended!"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <div class="section-title" data-aos="fade-up">
+            <span class="section-kicker">— FREQUENTLY ASKED QUESTIONS</span>
+            <h2>Have Any <span class="accent">Questions?</span></h2>
+            <p>Find answers to common questions about services, pricing, and project workflows.</p>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="50">
+                <div class="faq-question">
+                    <span>What services do you offer?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>I offer full-cycle web development (custom landing pages, corporate websites, dynamic web applications), mobile application development with Flutter & Firebase (Android & iOS), custom logo and UI/UX design, and AI application integrations.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="faq-question">
+                    <span>How long does a typical project take?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Standard websites usually take 5 to 10 business days. Comprehensive web platforms and full mobile applications take approximately 2 to 4 weeks, depending on requirements and custom features.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
+                <div class="faq-question">
+                    <span>How can I claim the 50% discount?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Simply use the discount code <strong>MOUAD50</strong> when submitting the contact form below or when messaging me directly on WhatsApp. The discount applies to all web and mobile application packages!</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="faq-question">
+                    <span>Do you provide maintenance and technical support?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! Every project includes dedicated post-launch support and maintenance to ensure smooth performance, security updates, and regular backups.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="250">
+                <div class="faq-question">
+                    <span>How do we start working together?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Fill out the contact form below or reach out via WhatsApp / Email. We will discuss your project scope, requirements, timeline, and provide a clear, competitive quote.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-title" data-aos="fade-up">
+            <span class="section-kicker">— GET IN TOUCH</span>
+            <h2>Let's Work <span class="accent">Together</span></h2>
+            <p>Have a project in mind or want to consult on your next big idea? Reach out today!</p>
+        </div>
+
+        <div class="contact-container">
+            <!-- Contact Info -->
+            <div class="contact-info" data-aos="fade-right">
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p>mouadch097@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <h3>WhatsApp</h3>
+                        <p>+213 540 79 66 20</p>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fab fa-github"></i>
+                    <div>
+                        <h3>GitHub</h3>
+                        <p>github.com/mouadch097-cyber</p>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fab fa-telegram"></i>
+                    <div>
+                        <h3>Telegram</h3>
+                        <p>@mouadch</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <form id="contact-form" data-aos="fade-left">
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Your Name"
+                    required>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Your Email"
+                    required>
+
+                <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    placeholder="Subject (e.g. Website Project, code MOUAD50)"
+                    required>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Describe your project..."
+                    required></textarea>
+
+                <button type="submit" class="btn btn-primary">
+                    <span>Send Message</span> <i class="fas fa-paper-plane"></i>
+                </button>
+
+                <p id="status"></p>
+            </form>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
+        <div class="footer-container">
+            <a href="#home" class="logo">
+                <div class="logo-badge">M</div>
+                <span class="logo-text">Mouad</span><span class="logo-dot">.</span><span class="logo-dev">Dev</span>
+            </a>
 
+            <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="projects.html">All Projects</a></li>
+            </ul>
+
+            <div class="footer-socials">
+                <a href="https://github.com/mouadch097-cyber" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/mouad_cherrati" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@novix_tech9" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.youtube.com/@Mouad.dev07" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://t.me/mouadch" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                <a href="https://wa.me/213540796620" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:mouadch097@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+
+            <p class="footer-copy">© 2026 Mouad.Dev. All rights reserved. Designed & built with passion.</p>
+        </div>
     </footer>
 
-    <!-- JS -->
-
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.min.js"></script>
-
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
-
-    
 
     <script src="assets/js/app.js"></script>
     <script src="assets/js/email.js"></script>
     <!-- Firebase -->
-<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore-compat.js"></script>
     <script src="assets/js/firebase.js"></script>
     <script src="assets/js/particles.js"></script>
     <script src="assets/js/cursor.js"></script>
